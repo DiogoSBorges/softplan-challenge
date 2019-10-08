@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6179EC80-33DC-4CA2-B077-D063096B9ED3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api1", "Api1", "{8F86FF98-8EEE-4EE6-B5B9-3BE2E4A0D74D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D077C790-8A87-4D91-A7CB-6BAA570CB6D3}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api2", "Api2", "{DEDEC4ED-072A-48B3-84FC-619C2A6EC05D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diogo.Softplan.Challenge.Api1.Api", "src\Api1\Diogo.Softplan.Challenge.Api1.Api\Diogo.Softplan.Challenge.Api1.Api.csproj", "{AA8217A2-2B04-4304-8D4C-D3F4E888C8B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diogo.Softplan.Challenge.Api1.Domain", "src\Api1\Diogo.Softplan.Challenge.Api1.Domain\Diogo.Softplan.Challenge.Api1.Domain.csproj", "{155AE3D5-48EE-4AF4-B84E-B4FF87948E29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diogo.Softplan.Challenge.Api1.Application", "src\Api1\Diogo.Softplan.Challenge.Api1.Application\Diogo.Softplan.Challenge.Api1.Application.csproj", "{8517637D-F7F3-427C-8F14-01C5A35999CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA8217A2-2B04-4304-8D4C-D3F4E888C8B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA8217A2-2B04-4304-8D4C-D3F4E888C8B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA8217A2-2B04-4304-8D4C-D3F4E888C8B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA8217A2-2B04-4304-8D4C-D3F4E888C8B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{155AE3D5-48EE-4AF4-B84E-B4FF87948E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{155AE3D5-48EE-4AF4-B84E-B4FF87948E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{155AE3D5-48EE-4AF4-B84E-B4FF87948E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{155AE3D5-48EE-4AF4-B84E-B4FF87948E29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8517637D-F7F3-427C-8F14-01C5A35999CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8517637D-F7F3-427C-8F14-01C5A35999CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8517637D-F7F3-427C-8F14-01C5A35999CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8517637D-F7F3-427C-8F14-01C5A35999CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8F86FF98-8EEE-4EE6-B5B9-3BE2E4A0D74D} = {6179EC80-33DC-4CA2-B077-D063096B9ED3}
+		{DEDEC4ED-072A-48B3-84FC-619C2A6EC05D} = {6179EC80-33DC-4CA2-B077-D063096B9ED3}
+		{AA8217A2-2B04-4304-8D4C-D3F4E888C8B2} = {8F86FF98-8EEE-4EE6-B5B9-3BE2E4A0D74D}
+		{155AE3D5-48EE-4AF4-B84E-B4FF87948E29} = {8F86FF98-8EEE-4EE6-B5B9-3BE2E4A0D74D}
+		{8517637D-F7F3-427C-8F14-01C5A35999CE} = {8F86FF98-8EEE-4EE6-B5B9-3BE2E4A0D74D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4EC14436-1DC6-4246-9B63-839DA9A04998}
+	EndGlobalSection
+EndGlobal
