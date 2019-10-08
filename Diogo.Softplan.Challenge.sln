@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diogo.Softplan.Challenge.Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diogo.Softplan.Challenge.Api1.Application", "src\Api1\Diogo.Softplan.Challenge.Api1.Application\Diogo.Softplan.Challenge.Api1.Application.csproj", "{8517637D-F7F3-427C-8F14-01C5A35999CE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A93DAE34-D977-4310-A8E6-4985793850E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diogo.Softplan.Challenge.Api1.Tests", "src\Api1\tests\Diogo.Softplan.Challenge.Api1.Tests\Diogo.Softplan.Challenge.Api1.Tests.csproj", "{EC583F3D-1488-4EA5-9B5B-89C90A3A5952}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,10 @@ Global
 		{8517637D-F7F3-427C-8F14-01C5A35999CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8517637D-F7F3-427C-8F14-01C5A35999CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8517637D-F7F3-427C-8F14-01C5A35999CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC583F3D-1488-4EA5-9B5B-89C90A3A5952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC583F3D-1488-4EA5-9B5B-89C90A3A5952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC583F3D-1488-4EA5-9B5B-89C90A3A5952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC583F3D-1488-4EA5-9B5B-89C90A3A5952}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +57,8 @@ Global
 		{AA8217A2-2B04-4304-8D4C-D3F4E888C8B2} = {8F86FF98-8EEE-4EE6-B5B9-3BE2E4A0D74D}
 		{155AE3D5-48EE-4AF4-B84E-B4FF87948E29} = {8F86FF98-8EEE-4EE6-B5B9-3BE2E4A0D74D}
 		{8517637D-F7F3-427C-8F14-01C5A35999CE} = {8F86FF98-8EEE-4EE6-B5B9-3BE2E4A0D74D}
+		{A93DAE34-D977-4310-A8E6-4985793850E2} = {8F86FF98-8EEE-4EE6-B5B9-3BE2E4A0D74D}
+		{EC583F3D-1488-4EA5-9B5B-89C90A3A5952} = {A93DAE34-D977-4310-A8E6-4985793850E2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4EC14436-1DC6-4246-9B63-839DA9A04998}

@@ -1,4 +1,5 @@
 ﻿using Diogo.Softplan.Challenge.Api1.Domain.Services;
+using System;
 
 namespace Diogo.Softplan.Challenge.Api1.Application.Services
 {
@@ -6,7 +7,8 @@ namespace Diogo.Softplan.Challenge.Api1.Application.Services
     {
         public double Obter()
         {
-            return (1 / 100);
+            var result = 1.0 / 100.0;
+            return result;
         }
     }
 }
