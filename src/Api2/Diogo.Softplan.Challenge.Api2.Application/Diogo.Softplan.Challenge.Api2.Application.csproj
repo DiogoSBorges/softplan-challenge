@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Diogo.Softplan.Challenge.Api2.Domain\Diogo.Softplan.Challenge.Api2.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
