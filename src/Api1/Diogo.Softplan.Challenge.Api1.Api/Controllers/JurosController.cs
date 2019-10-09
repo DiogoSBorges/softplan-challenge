@@ -15,6 +15,10 @@ namespace Diogo.Softplan.Challenge.Api1.Api.Controllers
         }
 
 
+        /// <summary>
+        /// Retorna a taxa de juros - Valor Estático: 0.01
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult<double> ObterTaxaJuros()
         {
