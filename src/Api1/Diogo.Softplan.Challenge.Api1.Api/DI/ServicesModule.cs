@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using Diogo.Softplan.Challenge.Api1.Application.Services;
 using System.Linq;
 
 namespace Diogo.Softplan.Challenge.Api1.Api.DI
@@ -7,7 +8,7 @@ namespace Diogo.Softplan.Challenge.Api1.Api.DI
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterAssemblyTypes(System.Reflection.Assembly.GetExecutingAssembly())
+            builder.RegisterAssemblyTypes(typeof(ServicesFoo).Assembly)
                .Where(x => x.FullName.StartsWith("Diogo.Softplan.Challenge.Api1.Application.Services.") &&
                            x.FullName.EndsWith("Service"))
                .AsImplementedInterfaces();
