@@ -21,7 +21,7 @@ namespace Diogo.Softplan.Challenge.Api1.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public ActionResult<double> ObterTaxaJuros()
+        public ActionResult<decimal> ObterTaxaJuros()
         {
             return _taxaDeJurosService.Obter();
         }        

@@ -13,7 +13,7 @@ namespace Diogo.Softplan.Challenge.Api1.Tests.services
         {
             var resultado = _service.Obter();
 
-            resultado.Should().Be(0.01);
+            resultado.Should().Be(0.01m);
         }
     }
 }
