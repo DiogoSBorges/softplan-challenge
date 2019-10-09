@@ -2,8 +2,7 @@
 using Diogo.Softplan.Challenge.Api1.Application.Services;
 using System.Linq;
 
-namespace Diogo.Softplan.Challenge.Api1.Api.DI
-{
+namespace Diogo.Softplan.Challenge.Api1.Application.DI {
     public class ServicesModule : Module
     {
         protected override void Load(ContainerBuilder builder)

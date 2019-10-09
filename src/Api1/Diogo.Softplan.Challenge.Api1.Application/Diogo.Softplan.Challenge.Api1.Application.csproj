@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.4" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Diogo.Softplan.Challenge.Api1.Domain\Diogo.Softplan.Challenge.Api1.Domain.csproj" />
   </ItemGroup>
 

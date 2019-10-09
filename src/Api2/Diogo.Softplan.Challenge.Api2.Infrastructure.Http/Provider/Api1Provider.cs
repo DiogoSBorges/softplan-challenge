@@ -2,16 +2,7 @@
 {
     public class Api1Provider
     {
-        public string Url { get; private set; }
-
-        public Api1Provider()
-        {
-
-        }
-
-        public Api1Provider(string url)
-        {
-            Url = url;
-        }
+        public string Url { get; set; }
+        
     }
 }
