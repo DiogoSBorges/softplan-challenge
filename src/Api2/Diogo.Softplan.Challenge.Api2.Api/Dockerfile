@@ -1,19 +1,21 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-stretch-slim AS base
+FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
 WORKDIR /app
 EXPOSE 80
 
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
+FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /src
-COPY ["src/Api2/Diogo.Softplan.Challenge.Api2.Api/Diogo.Softplan.Challenge.Api2.Api.csproj", "src/Api2/Diogo.Softplan.Challenge.Api2.Api/"]
-RUN dotnet restore "src/Api2/Diogo.Softplan.Challenge.Api2.Api/Diogo.Softplan.Challenge.Api2.Api.csproj"
+COPY src/Api2/Diogo.Softplan.Challenge.Api2.Api/Diogo.Softplan.Challenge.Api2.Api.csproj src/Api2/Diogo.Softplan.Challenge.Api2.Api/
+COPY src/Api2/Diogo.Softplan.Challenge.Api2.Domain/Diogo.Softplan.Challenge.Api2.Domain.csproj src/Api2/Diogo.Softplan.Challenge.Api2.Domain/
+COPY src/Api2/Diogo.Softplan.Challenge.Api2.Infrastructure.Http/Diogo.Softplan.Challenge.Api2.Infrastructure.Http.csproj src/Api2/Diogo.Softplan.Challenge.Api2.Infrastructure.Http/
+RUN dotnet restore src/Api2/Diogo.Softplan.Challenge.Api2.Api/Diogo.Softplan.Challenge.Api2.Api.csproj
 COPY . .
-WORKDIR "/src/src/Api2/Diogo.Softplan.Challenge.Api2.Api"
-RUN dotnet build "Diogo.Softplan.Challenge.Api2.Api.csproj" -c Release -o /app/build
+WORKDIR /src/src/Api2/Diogo.Softplan.Challenge.Api2.Api
+RUN dotnet build Diogo.Softplan.Challenge.Api2.Api.csproj -c Release -o /app
 
 FROM build AS publish
-RUN dotnet publish "Diogo.Softplan.Challenge.Api2.Api.csproj" -c Release -o /app/publish
+RUN dotnet publish Diogo.Softplan.Challenge.Api2.Api.csproj -c Release -o /app
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "Diogo.Softplan.Challenge.Api2.Api.dll"]

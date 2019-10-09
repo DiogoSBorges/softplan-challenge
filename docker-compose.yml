@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  diogo.softplan.challenge.api1.api:
+    image: ${DOCKER_REGISTRY-}diogosoftplanchallengeapi1api
+    build:
+      context: .
+      dockerfile: src/Api1/Diogo.Softplan.Challenge.Api1.Api/Dockerfile
+
+  diogo.softplan.challenge.api2.api:
+    image: ${DOCKER_REGISTRY-}diogosoftplanchallengeapi2api
+    build:
+      context: .
+      dockerfile: src/Api2/Diogo.Softplan.Challenge.Api2.Api/Dockerfile
+

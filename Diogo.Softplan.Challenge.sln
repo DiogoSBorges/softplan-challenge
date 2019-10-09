@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29326.143
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6179EC80-33DC-4CA2-B077-D063096B9ED3}"
 EndProject
@@ -27,11 +27,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Api2.Api", "src\Api2\Diogo.Softplan.Challenge.Api2.Api\Diogo.Softplan.Challenge.Api2.Api.csproj", "{E2D8DB2C-D0C7-4BE0-A240-41E94240CB7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diogo.Softplan.Challenge.Api2.Domain", "src\Api2\Diogo.Softplan.Challenge.Api2.Domain\Diogo.Softplan.Challenge.Api2.Domain.csproj", "{093D045B-7B7D-4A7F-BAF1-717D71D3A6CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Api2.Domain", "src\Api2\Diogo.Softplan.Challenge.Api2.Domain\Diogo.Softplan.Challenge.Api2.Domain.csproj", "{093D045B-7B7D-4A7F-BAF1-717D71D3A6CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diogo.Softplan.Challenge.Api2.Infrastructure.Http", "src\Api2\Diogo.Softplan.Challenge.Api2.Infrastructure.Http\Diogo.Softplan.Challenge.Api2.Infrastructure.Http.csproj", "{55040E54-6190-4806-B0CC-D8CDF623FFAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Api2.Infrastructure.Http", "src\Api2\Diogo.Softplan.Challenge.Api2.Infrastructure.Http\Diogo.Softplan.Challenge.Api2.Infrastructure.Http.csproj", "{55040E54-6190-4806-B0CC-D8CDF623FFAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diogo.Softplan.Challenge.Api2.Application", "src\Api2\Diogo.Softplan.Challenge.Api2.Application\Diogo.Softplan.Challenge.Api2.Application.csproj", "{833AFD80-94A8-4979-BCD9-BA923FFCB23F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Api2.Application", "src\Api2\Diogo.Softplan.Challenge.Api2.Application\Diogo.Softplan.Challenge.Api2.Application.csproj", "{833AFD80-94A8-4979-BCD9-BA923FFCB23F}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{CCCFBAE4-BA9F-4486-9141-4A7E510CBB0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +73,10 @@ Global
 		{833AFD80-94A8-4979-BCD9-BA923FFCB23F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{833AFD80-94A8-4979-BCD9-BA923FFCB23F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{833AFD80-94A8-4979-BCD9-BA923FFCB23F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCCFBAE4-BA9F-4486-9141-4A7E510CBB0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCCFBAE4-BA9F-4486-9141-4A7E510CBB0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCCFBAE4-BA9F-4486-9141-4A7E510CBB0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCCFBAE4-BA9F-4486-9141-4A7E510CBB0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
