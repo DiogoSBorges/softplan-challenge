@@ -1,6 +1,9 @@
 ﻿using Diogo.Softplan.Challenge.Api2.Api.DI.Provider;
 using Diogo.Softplan.Challenge.Api2.Domain.Services;
 using System;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace Diogo.Softplan.Challenge.Api2.Infrastructure.Http.Services
@@ -15,9 +18,33 @@ namespace Diogo.Softplan.Challenge.Api2.Infrastructure.Http.Services
             _api1Provider = api1Provider;
         }
 
-        public Task<double> ObterTaxaDeJurosAsync()
+        public async Task<double> ObterTaxaDeJurosAsync()
         {
-            throw new NotImplementedException();
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(_api1Provider.Url);
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+
+                var responseMessage = await client.GetAsync("api/taxaJuros");
+                var response = await responseMessage.Content.ReadAsStringAsync();
+
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    return double.Parse(response);
+                }
+
+                switch (responseMessage.StatusCode)
+                {
+                    case HttpStatusCode.BadRequest:
+                        throw new ArgumentException(response);
+
+                    default:
+                        throw new Exception(response);
+                }
+
+            }
         }
     }
 }

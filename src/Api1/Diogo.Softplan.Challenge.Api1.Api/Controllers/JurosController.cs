@@ -1,4 +1,5 @@
 ﻿using Diogo.Softplan.Challenge.Api1.Domain.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Diogo.Softplan.Challenge.Api1.Api.Controllers

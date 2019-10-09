@@ -23,10 +23,10 @@ namespace Diogo.Softplan.Challenge.Api2.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public async Task<IEnumerable<string>> Get()
         {
 
-            _api1Service.ObterTaxaDeJurosAsync();
+            await _api1Service.ObterTaxaDeJurosAsync();
             return new string[] { "value1", "value2" };
         }
 
