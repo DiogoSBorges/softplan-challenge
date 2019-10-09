@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Diogo.Softplan.Challenge.Api2.Domain.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Diogo.Softplan.Challenge.Api2.Api.Controllers
@@ -10,6 +11,12 @@ namespace Diogo.Softplan.Challenge.Api2.Api.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly IApi1Service _api1Service;
+
+        public ValuesController(IApi1Service api1Service)
+        {
+            _api1Service = api1Service;
+        }
 
         /// <summary>
         /// GET api/values
@@ -18,6 +25,8 @@ namespace Diogo.Softplan.Challenge.Api2.Api.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+
+            _api1Service.ObterTaxaDeJurosAsync();
             return new string[] { "value1", "value2" };
         }
 

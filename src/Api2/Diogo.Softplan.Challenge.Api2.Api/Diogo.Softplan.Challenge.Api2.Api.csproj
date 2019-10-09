@@ -20,6 +20,11 @@
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="4.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Diogo.Softplan.Challenge.Api2.Domain\Diogo.Softplan.Challenge.Api2.Domain.csproj" />
+    <ProjectReference Include="..\Diogo.Softplan.Challenge.Api2.Infrastructure.Http\Diogo.Softplan.Challenge.Api2.Infrastructure.Http.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);1591</NoWarn>
