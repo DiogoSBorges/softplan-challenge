@@ -1,34 +1,38 @@
-﻿using Autofac;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Threading.Tasks;
+using Autofac;
 using Autofac.Extensions.DependencyInjection;
-using Diogo.Softplan.Challenge.Api1.Api.DI;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
-using System;
-using System.IO;
-using System.Reflection;
 
-namespace Diogo.Softplan.Challenge.Api1.Api
+namespace Diogo.Softplan.Challenge.Api2.Api
 {
     public class Startup
     {
-        public ILifetimeScope AutofacContainer { get; private set; }
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
-        public IServiceProvider ConfigureServices(IServiceCollection services)
+
+       public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
             services.AddOptions();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Diogo.Softplan.Challenge.API1 - API", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = "Diogo.Softplan.Challenge.API2 - API", Version = "v1" });
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
@@ -36,11 +40,11 @@ namespace Diogo.Softplan.Challenge.Api1.Api
 
             var builder = new ContainerBuilder();
             builder.Populate(services);
-            builder.RegisterModule(new ServicesModule());
 
             return new AutofacServiceProvider(builder.Build());
         }
 
+        
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -51,7 +55,7 @@ namespace Diogo.Softplan.Challenge.Api1.Api
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Diogo.Softplan.Challenge.API1 - API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Diogo.Softplan.Challenge.API2 - API V1");
             });
 
             app.UseMvc();

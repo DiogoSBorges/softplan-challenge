@@ -15,15 +15,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api2", "Api2", "{DEDEC4ED-072A-48B3-84FC-619C2A6EC05D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diogo.Softplan.Challenge.Api1.Api", "src\Api1\Diogo.Softplan.Challenge.Api1.Api\Diogo.Softplan.Challenge.Api1.Api.csproj", "{AA8217A2-2B04-4304-8D4C-D3F4E888C8B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Api1.Api", "src\Api1\Diogo.Softplan.Challenge.Api1.Api\Diogo.Softplan.Challenge.Api1.Api.csproj", "{AA8217A2-2B04-4304-8D4C-D3F4E888C8B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diogo.Softplan.Challenge.Api1.Domain", "src\Api1\Diogo.Softplan.Challenge.Api1.Domain\Diogo.Softplan.Challenge.Api1.Domain.csproj", "{155AE3D5-48EE-4AF4-B84E-B4FF87948E29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Api1.Domain", "src\Api1\Diogo.Softplan.Challenge.Api1.Domain\Diogo.Softplan.Challenge.Api1.Domain.csproj", "{155AE3D5-48EE-4AF4-B84E-B4FF87948E29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diogo.Softplan.Challenge.Api1.Application", "src\Api1\Diogo.Softplan.Challenge.Api1.Application\Diogo.Softplan.Challenge.Api1.Application.csproj", "{8517637D-F7F3-427C-8F14-01C5A35999CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Api1.Application", "src\Api1\Diogo.Softplan.Challenge.Api1.Application\Diogo.Softplan.Challenge.Api1.Application.csproj", "{8517637D-F7F3-427C-8F14-01C5A35999CE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A93DAE34-D977-4310-A8E6-4985793850E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diogo.Softplan.Challenge.Api1.Tests", "src\Api1\tests\Diogo.Softplan.Challenge.Api1.Tests\Diogo.Softplan.Challenge.Api1.Tests.csproj", "{EC583F3D-1488-4EA5-9B5B-89C90A3A5952}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Api1.Tests", "src\Api1\tests\Diogo.Softplan.Challenge.Api1.Tests\Diogo.Softplan.Challenge.Api1.Tests.csproj", "{EC583F3D-1488-4EA5-9B5B-89C90A3A5952}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diogo.Softplan.Challenge.Api2.Api", "src\Api2\Diogo.Softplan.Challenge.Api2.Api\Diogo.Softplan.Challenge.Api2.Api.csproj", "{E2D8DB2C-D0C7-4BE0-A240-41E94240CB7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{EC583F3D-1488-4EA5-9B5B-89C90A3A5952}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC583F3D-1488-4EA5-9B5B-89C90A3A5952}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC583F3D-1488-4EA5-9B5B-89C90A3A5952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2D8DB2C-D0C7-4BE0-A240-41E94240CB7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2D8DB2C-D0C7-4BE0-A240-41E94240CB7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2D8DB2C-D0C7-4BE0-A240-41E94240CB7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2D8DB2C-D0C7-4BE0-A240-41E94240CB7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +65,7 @@ Global
 		{8517637D-F7F3-427C-8F14-01C5A35999CE} = {8F86FF98-8EEE-4EE6-B5B9-3BE2E4A0D74D}
 		{A93DAE34-D977-4310-A8E6-4985793850E2} = {8F86FF98-8EEE-4EE6-B5B9-3BE2E4A0D74D}
 		{EC583F3D-1488-4EA5-9B5B-89C90A3A5952} = {A93DAE34-D977-4310-A8E6-4985793850E2}
+		{E2D8DB2C-D0C7-4BE0-A240-41E94240CB7B} = {DEDEC4ED-072A-48B3-84FC-619C2A6EC05D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4EC14436-1DC6-4246-9B63-839DA9A04998}
