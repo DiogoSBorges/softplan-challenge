@@ -1,16 +1,19 @@
-﻿using Autofac;
-using Diogo.Softplan.Challenge.Api2.Infrastructure.Http.Services;
+﻿using Diogo.Softplan.Challenge.Api2.Infrastructure.Http.Services;
+using Microsoft.Extensions.DependencyInjection;
+using System.Linq;
 
 namespace Diogo.Softplan.Challenge.Api2.Infrastructure.Http.DI
 {
-    public class HttpModule : Module
+    public static class HttpModule
     {
-        protected override void Load(ContainerBuilder builder)
+        public static void HttpModuleRegister(this IServiceCollection services)
         {
-            builder.RegisterAssemblyTypes(typeof(ServicesFoo).Assembly)
-               .Where(x => x.FullName.StartsWith("Diogo.Softplan.Challenge.Api2.Infrastructure.Http.Services.") &&
-                           x.FullName.EndsWith("Service"))
-               .AsImplementedInterfaces();
+            var httpServices = typeof(ServicesFoo).Assembly.GetTypes().Where(t => t.FullName.StartsWith("Diogo.Softplan.Challenge.Api2.Infrastructure.Http.Services.") && t.FullName.EndsWith("Service"));
+
+            foreach (var httpService in httpServices)
+            {
+                services.AddSingleton(httpService.GetInterfaces().First(), httpService);
+            }
         }
     }
 }

@@ -1,9 +1,6 @@
-﻿using Autofac;
-using Autofac.Extensions.DependencyInjection;
-using Diogo.Softplan.Challenge.Api2.Api.Extensions;
+﻿using Diogo.Softplan.Challenge.Api2.Api.Extensions;
 using Diogo.Softplan.Challenge.Api2.Application.DI;
 using Diogo.Softplan.Challenge.Api2.Infrastructure.Http.DI;
-using Diogo.Softplan.Challenge.Api2.Infrastructure.Http.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -11,7 +8,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
 using System;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 
 namespace Diogo.Softplan.Challenge.Api2.Api
@@ -38,21 +34,8 @@ namespace Diogo.Softplan.Challenge.Api2.Api
                 c.IncludeXmlComments(xmlPath);
             });
 
-            var httpServices = typeof(ServicesFoo).Assembly.GetTypes().Where(t => t.FullName.StartsWith("Diogo.Softplan.Challenge.Api2.Infrastructure.Http.Services.") &&
-                           t.FullName.EndsWith("Service"));
-
-            foreach (var httpService in httpServices)
-            {
-                services.AddSingleton(httpService.GetInterfaces().First(), httpService);
-            }
-
-            var appServices = typeof(Application.Services.ServicesFoo).Assembly.GetTypes().Where(t => t.FullName.StartsWith("Diogo.Softplan.Challenge.Api2.Application.Services.") &&
-                           t.FullName.EndsWith("Service"));
-
-            foreach (var appService in appServices)
-            {
-                services.AddSingleton(appService.GetInterfaces().First(), appService);
-            }
+            services.HttpModuleRegister();
+            services.ApplicationServicesModuleRegister();
         }
 
 
@@ -71,6 +54,6 @@ namespace Diogo.Softplan.Challenge.Api2.Api
 
             app.UseMvc();
         }
-        
+
     }
 }

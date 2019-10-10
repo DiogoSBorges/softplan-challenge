@@ -1,9 +1,6 @@
-﻿using Autofac;
-using Autofac.Extensions.DependencyInjection;
-using Diogo.Softplan.Challenge.Api2.Api;
+﻿using Diogo.Softplan.Challenge.Api2.Api;
 using Diogo.Softplan.Challenge.Api2.Domain.Services;
 using FluentAssertions;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,10 +29,10 @@ namespace Diogo.Softplan.Challenge.Api2.Integration.Tests.Api
         {
 
             var mock = new Mock<IApi1Service>();
-            mock.Setup(x=>x.ObterTaxaDeJurosAsync()).Returns(Task.FromResult(0.01m));
+            mock.Setup(x => x.ObterTaxaDeJurosAsync()).Returns(Task.FromResult(0.01m));
 
             var client = _factory.WithWebHostBuilder(hostbuilder =>
-            {        
+            {
                 hostbuilder.ConfigureTestServices((services) =>
                 {
                     services.AddSingleton<IApi1Service>(mock.Object);
@@ -55,5 +52,5 @@ namespace Diogo.Softplan.Challenge.Api2.Integration.Tests.Api
 
             result.Should().Be("105.1");
         }
-    }    
+    }
 }
