@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29403.142
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6179EC80-33DC-4CA2-B077-D063096B9ED3}"
 EndProject
@@ -41,7 +41,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Api1.Integration.Tests", "src\Api1\tests\Diogo.Softplan.Challenge.Api1.IntegrationTests\Diogo.Softplan.Challenge.Api1.Integration.Tests.csproj", "{17583358-F4AC-4A10-83B6-2C2CDED073E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diogo.Softplan.Challenge.Api2.Integration.Tests", "src\Api2\tests\Diogo.Softplan.Challenge.Api2.Integration.Tests\Diogo.Softplan.Challenge.Api2.Integration.Tests.csproj", "{3CC3135C-7D7F-4379-BD95-3CBC27C37F08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Api2.Integration.Tests", "src\Api2\tests\Diogo.Softplan.Challenge.Api2.Integration.Tests\Diogo.Softplan.Challenge.Api2.Integration.Tests.csproj", "{3CC3135C-7D7F-4379-BD95-3CBC27C37F08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "..\WebApplication1\WebApplication1.csproj", "{E93D1403-01FC-4D28-8B3B-2C5EE0EE41F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +99,10 @@ Global
 		{3CC3135C-7D7F-4379-BD95-3CBC27C37F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CC3135C-7D7F-4379-BD95-3CBC27C37F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CC3135C-7D7F-4379-BD95-3CBC27C37F08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E93D1403-01FC-4D28-8B3B-2C5EE0EE41F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E93D1403-01FC-4D28-8B3B-2C5EE0EE41F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E93D1403-01FC-4D28-8B3B-2C5EE0EE41F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E93D1403-01FC-4D28-8B3B-2C5EE0EE41F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -117,6 +123,7 @@ Global
 		{ACC54D19-1768-4461-8120-083E46732DE2} = {C3D3C8D0-B5F1-4EE6-93FA-7AF5BD0F4B49}
 		{17583358-F4AC-4A10-83B6-2C2CDED073E2} = {A93DAE34-D977-4310-A8E6-4985793850E2}
 		{3CC3135C-7D7F-4379-BD95-3CBC27C37F08} = {C3D3C8D0-B5F1-4EE6-93FA-7AF5BD0F4B49}
+		{E93D1403-01FC-4D28-8B3B-2C5EE0EE41F3} = {8F86FF98-8EEE-4EE6-B5B9-3BE2E4A0D74D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4EC14436-1DC6-4246-9B63-839DA9A04998}

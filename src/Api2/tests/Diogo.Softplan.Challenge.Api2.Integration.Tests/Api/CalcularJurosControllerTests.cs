@@ -1,18 +1,15 @@
-﻿using Diogo.Softplan.Challenge.Api2.Api;
-using Diogo.Softplan.Challenge.Api2.Application.Services;
+﻿using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Diogo.Softplan.Challenge.Api2.Api;
 using Diogo.Softplan.Challenge.Api2.Domain.Services;
-using Diogo.Softplan.Challenge.Api2.Infrastructure.Http.Services;
 using FluentAssertions;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using Moq;
-using System;
-using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -27,34 +24,24 @@ namespace Diogo.Softplan.Challenge.Api2.Integration.Tests.Api
         {
             _factory = factory;
 
-            _factory.WithWebHostBuilder(builder => {
-
-                builder.ConfigureTestServices(services =>
-                {
-                    var mockTeste = new Mock<Api1Service>();
-                    mockTeste.Setup(x => x.ObterTaxaDeJurosAsync()).Returns(Task.FromResult(0.01m));
-                                       
-                    services.AddSingleton<IApi1Service>((sp) => mockTeste.Object);
-                });
-            });
         }
 
         [Theory]
-        [InlineData("GET", 100,5)]
+        [InlineData("GET", 100, 5)]
         public async void Quando_calcular_taxa_juros(string metodo, decimal valorInicial, int meses)
         {
-            var client = _factory.WithWebHostBuilder(builder => {
 
-                builder.ConfigureTestServices(services =>
+            var mock = new Mock<IApi1Service>();
+            mock.Setup(x=>x.ObterTaxaDeJurosAsync()).Returns(Task.FromResult(0.01m));
+
+            var client = _factory.WithWebHostBuilder(hostbuilder =>
+            {        
+                hostbuilder.ConfigureTestServices((services) =>
                 {
-                    var serviceProvider = services.BuildServiceProvider();
-                    var descriptor =
-                        new ServiceDescriptor(
-                            typeof(IApi1Service),
-                            typeof(MockedServiceClient));
-                    services.Replace(descriptor);
+                    services.AddSingleton<IApi1Service>(mock.Object);
                 });
-            }).CreateClient();
+            })
+        .CreateClient();
 
             var request = new HttpRequestMessage(new HttpMethod(metodo), $"/api/calcularJuros?valorInicial={valorInicial}&meses={meses}");
 
@@ -68,13 +55,5 @@ namespace Diogo.Softplan.Challenge.Api2.Integration.Tests.Api
 
             result.Should().Be("105.1");
         }
-    }
-
-    public class MockedServiceClient : IApi1Service
-    {       
-        public Task<decimal> ObterTaxaDeJurosAsync()
-        {
-            return Task.FromResult(0.01m);
-        }        
-    }
+    }    
 }
