@@ -7,12 +7,12 @@ using Xunit;
 
 namespace Diogo.Softplan.Challenge.Api1.Integration.Tests.Api
 {
-    public class TaxaJurosApiTests : IClassFixture<WebApplicationFactory<Startup>>
+    public class JurosControllerTests : IClassFixture<WebApplicationFactory<Startup>>
     {
 
         private readonly WebApplicationFactory<Startup> _factory;
 
-        public TaxaJurosApiTests(WebApplicationFactory<Startup> factory)
+        public JurosControllerTests(WebApplicationFactory<Startup> factory)
         {
             _factory = factory;
         }
@@ -29,6 +29,7 @@ namespace Diogo.Softplan.Challenge.Api1.Integration.Tests.Api
 
             response.EnsureSuccessStatusCode();
             response.StatusCode.Should().Be(HttpStatusCode.OK);
+            response.Content.Should().NotBeNull();
         }
     }
 }

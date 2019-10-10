@@ -41,6 +41,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Api1.Integration.Tests", "src\Api1\tests\Diogo.Softplan.Challenge.Api1.IntegrationTests\Diogo.Softplan.Challenge.Api1.Integration.Tests.csproj", "{17583358-F4AC-4A10-83B6-2C2CDED073E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diogo.Softplan.Challenge.Api2.Integration.Tests", "src\Api2\tests\Diogo.Softplan.Challenge.Api2.Integration.Tests\Diogo.Softplan.Challenge.Api2.Integration.Tests.csproj", "{3CC3135C-7D7F-4379-BD95-3CBC27C37F08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,10 @@ Global
 		{17583358-F4AC-4A10-83B6-2C2CDED073E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17583358-F4AC-4A10-83B6-2C2CDED073E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17583358-F4AC-4A10-83B6-2C2CDED073E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CC3135C-7D7F-4379-BD95-3CBC27C37F08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CC3135C-7D7F-4379-BD95-3CBC27C37F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CC3135C-7D7F-4379-BD95-3CBC27C37F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CC3135C-7D7F-4379-BD95-3CBC27C37F08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -110,6 +116,7 @@ Global
 		{C3D3C8D0-B5F1-4EE6-93FA-7AF5BD0F4B49} = {DEDEC4ED-072A-48B3-84FC-619C2A6EC05D}
 		{ACC54D19-1768-4461-8120-083E46732DE2} = {C3D3C8D0-B5F1-4EE6-93FA-7AF5BD0F4B49}
 		{17583358-F4AC-4A10-83B6-2C2CDED073E2} = {A93DAE34-D977-4310-A8E6-4985793850E2}
+		{3CC3135C-7D7F-4379-BD95-3CBC27C37F08} = {C3D3C8D0-B5F1-4EE6-93FA-7AF5BD0F4B49}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4EC14436-1DC6-4246-9B63-839DA9A04998}
