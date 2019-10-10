@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Diogo.Softplan.Challenge.Api2.Api.Extensions;
+using Diogo.Softplan.Challenge.Api2.Application.DI;
 using Diogo.Softplan.Challenge.Api2.Infrastructure.Http.DI;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -38,6 +39,7 @@ namespace Diogo.Softplan.Challenge.Api2.Api
             var builder = new ContainerBuilder();
             builder.Populate(services);
             builder.RegisterModule(new HttpModule());
+            builder.RegisterModule(new ServicesModule());
 
             return new AutofacServiceProvider(builder.Build());
         }

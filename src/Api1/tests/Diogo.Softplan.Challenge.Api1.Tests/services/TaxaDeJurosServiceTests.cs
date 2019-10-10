@@ -2,7 +2,7 @@
 using FluentAssertions;
 using Xunit;
 
-namespace Diogo.Softplan.Challenge.Api1.Tests.services
+namespace Diogo.Softplan.Challenge.Api1.Tests.Services
 {
     public class TaxaDeJurosServiceTests
     {

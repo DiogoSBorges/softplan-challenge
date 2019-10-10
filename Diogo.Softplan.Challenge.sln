@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.852
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29403.142
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6179EC80-33DC-4CA2-B077-D063096B9ED3}"
 EndProject
@@ -34,6 +34,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Api2.Application", "src\Api2\Diogo.Softplan.Challenge.Api2.Application\Diogo.Softplan.Challenge.Api2.Application.csproj", "{833AFD80-94A8-4979-BCD9-BA923FFCB23F}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{CCCFBAE4-BA9F-4486-9141-4A7E510CBB0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C3D3C8D0-B5F1-4EE6-93FA-7AF5BD0F4B49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diogo.Softplan.Challenge.Api2.Tests", "src\Api2\tests\Diogo.Softplan.Challenge.Api2.Tests\Diogo.Softplan.Challenge.Api2.Tests.csproj", "{ACC54D19-1768-4461-8120-083E46732DE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +81,10 @@ Global
 		{CCCFBAE4-BA9F-4486-9141-4A7E510CBB0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCCFBAE4-BA9F-4486-9141-4A7E510CBB0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCCFBAE4-BA9F-4486-9141-4A7E510CBB0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACC54D19-1768-4461-8120-083E46732DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACC54D19-1768-4461-8120-083E46732DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACC54D19-1768-4461-8120-083E46732DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACC54D19-1768-4461-8120-083E46732DE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +101,8 @@ Global
 		{093D045B-7B7D-4A7F-BAF1-717D71D3A6CF} = {DEDEC4ED-072A-48B3-84FC-619C2A6EC05D}
 		{55040E54-6190-4806-B0CC-D8CDF623FFAE} = {DEDEC4ED-072A-48B3-84FC-619C2A6EC05D}
 		{833AFD80-94A8-4979-BCD9-BA923FFCB23F} = {DEDEC4ED-072A-48B3-84FC-619C2A6EC05D}
+		{C3D3C8D0-B5F1-4EE6-93FA-7AF5BD0F4B49} = {DEDEC4ED-072A-48B3-84FC-619C2A6EC05D}
+		{ACC54D19-1768-4461-8120-083E46732DE2} = {C3D3C8D0-B5F1-4EE6-93FA-7AF5BD0F4B49}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4EC14436-1DC6-4246-9B63-839DA9A04998}

@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.9.0" />
+    <PackageReference Include="Moq" Version="4.13.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
       <PrivateAssets>all</PrivateAssets>
@@ -14,7 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Diogo.Softplan.Challenge.Api1.Application\Diogo.Softplan.Challenge.Api1.Application.csproj" />
-  </ItemGroup>
+    <ProjectReference Include="..\..\Diogo.Softplan.Challenge.Api2.Application\Diogo.Softplan.Challenge.Api2.Application.csproj" />
+    <ProjectReference Include="..\..\Diogo.Softplan.Challenge.Api2.Infrastructure.Http\Diogo.Softplan.Challenge.Api2.Infrastructure.Http.csproj" />
+  </ItemGroup>  
 
 </Project>

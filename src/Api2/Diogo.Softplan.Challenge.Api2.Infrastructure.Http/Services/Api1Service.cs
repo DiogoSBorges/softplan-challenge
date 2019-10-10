@@ -19,7 +19,7 @@ namespace Diogo.Softplan.Challenge.Api2.Infrastructure.Http.Services
             _api1Provider = api1Provider;
         }
 
-        public async Task<double> ObterTaxaDeJurosAsync()
+        public async Task<decimal> ObterTaxaDeJurosAsync()
         {
             using (var client = new HttpClient().CreateClient(_api1Provider.Value.Url))
             {
@@ -28,7 +28,7 @@ namespace Diogo.Softplan.Challenge.Api2.Infrastructure.Http.Services
 
                 if (responseMessage.IsSuccessStatusCode)
                 {
-                    return double.Parse(response);
+                    return decimal.Parse(response);
                 }
 
                 switch (responseMessage.StatusCode)
