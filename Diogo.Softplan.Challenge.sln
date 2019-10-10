@@ -37,7 +37,9 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C3D3C8D0-B5F1-4EE6-93FA-7AF5BD0F4B49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diogo.Softplan.Challenge.Api2.Tests", "src\Api2\tests\Diogo.Softplan.Challenge.Api2.Tests\Diogo.Softplan.Challenge.Api2.Tests.csproj", "{ACC54D19-1768-4461-8120-083E46732DE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Api2.Tests", "src\Api2\tests\Diogo.Softplan.Challenge.Api2.Tests\Diogo.Softplan.Challenge.Api2.Tests.csproj", "{ACC54D19-1768-4461-8120-083E46732DE2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Api1.Integration.Tests", "src\Api1\tests\Diogo.Softplan.Challenge.Api1.IntegrationTests\Diogo.Softplan.Challenge.Api1.Integration.Tests.csproj", "{17583358-F4AC-4A10-83B6-2C2CDED073E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +87,10 @@ Global
 		{ACC54D19-1768-4461-8120-083E46732DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACC54D19-1768-4461-8120-083E46732DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACC54D19-1768-4461-8120-083E46732DE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17583358-F4AC-4A10-83B6-2C2CDED073E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17583358-F4AC-4A10-83B6-2C2CDED073E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17583358-F4AC-4A10-83B6-2C2CDED073E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17583358-F4AC-4A10-83B6-2C2CDED073E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,6 +109,7 @@ Global
 		{833AFD80-94A8-4979-BCD9-BA923FFCB23F} = {DEDEC4ED-072A-48B3-84FC-619C2A6EC05D}
 		{C3D3C8D0-B5F1-4EE6-93FA-7AF5BD0F4B49} = {DEDEC4ED-072A-48B3-84FC-619C2A6EC05D}
 		{ACC54D19-1768-4461-8120-083E46732DE2} = {C3D3C8D0-B5F1-4EE6-93FA-7AF5BD0F4B49}
+		{17583358-F4AC-4A10-83B6-2C2CDED073E2} = {A93DAE34-D977-4310-A8E6-4985793850E2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4EC14436-1DC6-4246-9B63-839DA9A04998}
