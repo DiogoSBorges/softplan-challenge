@@ -39,7 +39,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C3D3C8D0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Api2.Tests", "src\Api2\tests\Diogo.Softplan.Challenge.Api2.Tests\Diogo.Softplan.Challenge.Api2.Tests.csproj", "{ACC54D19-1768-4461-8120-083E46732DE2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Api1.Integration.Tests", "src\Api1\tests\Diogo.Softplan.Challenge.Api1.IntegrationTests\Diogo.Softplan.Challenge.Api1.Integration.Tests.csproj", "{17583358-F4AC-4A10-83B6-2C2CDED073E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Api1.Integration.Tests", "src\Api1\tests\Diogo.Softplan.Challenge.Api1.Integration.Tests\Diogo.Softplan.Challenge.Api1.Integration.Tests.csproj", "{17583358-F4AC-4A10-83B6-2C2CDED073E2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diogo.Softplan.Challenge.Api2.Integration.Tests", "src\Api2\tests\Diogo.Softplan.Challenge.Api2.Integration.Tests\Diogo.Softplan.Challenge.Api2.Integration.Tests.csproj", "{3CC3135C-7D7F-4379-BD95-3CBC27C37F08}"
 EndProject
