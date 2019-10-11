@@ -9,6 +9,13 @@ COPY src/Api1/Diogo.Softplan.Challenge.Api1.Application/Diogo.Softplan.Challenge
 COPY src/Api1/Diogo.Softplan.Challenge.Api1.Domain/Diogo.Softplan.Challenge.Api1.Domain.csproj src/Api1/Diogo.Softplan.Challenge.Api1.Domain/
 RUN dotnet restore src/Api1/Diogo.Softplan.Challenge.Api1.Api/Diogo.Softplan.Challenge.Api1.Api.csproj
 COPY . .
+
+WORKDIR /src/src/Api1/tests/Diogo.Softplan.Challenge.Api1.Tests
+RUN dotnet test
+
+WORKDIR /src/src/Api1/tests/Diogo.Softplan.Challenge.Api2.Integration.Tests
+RUN dotnet test
+
 WORKDIR /src/src/Api1/Diogo.Softplan.Challenge.Api1.Api
 RUN dotnet build Diogo.Softplan.Challenge.Api1.Api.csproj -c Release -o /app
 
