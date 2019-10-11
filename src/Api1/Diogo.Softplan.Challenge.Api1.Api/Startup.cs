@@ -1,6 +1,4 @@
-﻿using Autofac;
-using Autofac.Extensions.DependencyInjection;
-using Diogo.Softplan.Challenge.Api1.Application.DI;
+﻿using Diogo.Softplan.Challenge.Api1.Application.DI;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -14,15 +12,13 @@ namespace Diogo.Softplan.Challenge.Api1.Api
 {
     public class Startup
     {
-        public ILifetimeScope AutofacContainer { get; private set; }
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
-        public IServiceProvider ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
             services.AddOptions();
@@ -34,11 +30,7 @@ namespace Diogo.Softplan.Challenge.Api1.Api
                 c.IncludeXmlComments(xmlPath);
             });
 
-            var builder = new ContainerBuilder();
-            builder.Populate(services);
-            builder.RegisterModule(new ServicesModule());
-
-            return new AutofacServiceProvider(builder.Build());
+            services.ApplicationServicesModuleRegister();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
