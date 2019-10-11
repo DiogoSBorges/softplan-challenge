@@ -13,7 +13,7 @@ COPY . .
 WORKDIR /src/src/Api1/tests/Diogo.Softplan.Challenge.Api1.Tests
 RUN dotnet test
 
-WORKDIR /src/src/Api1/tests/Diogo.Softplan.Challenge.Api2.Integration.Tests
+WORKDIR /src/src/Api1/tests/Diogo.Softplan.Challenge.Api1.Integration.Tests
 RUN dotnet test
 
 WORKDIR /src/src/Api1/Diogo.Softplan.Challenge.Api1.Api
